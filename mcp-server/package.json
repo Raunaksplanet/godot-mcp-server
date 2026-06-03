@@ -1,0 +1,27 @@
+{
+  "name": "godot-mcp-server",
+  "version": "2.0.0",
+  "description": "Production-grade MCP server for controlling the Godot 4.x game engine via the Model Context Protocol",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "npx tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "prebuild": "npm run lint"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/ws": "^8.18.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.1"
+  }
+}
